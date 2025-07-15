@@ -33,6 +33,9 @@ body {
 .navbar {
   display: flex;
   gap: 4%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow-y: auto;
 }
 
 .navbar a {
