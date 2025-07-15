@@ -10,38 +10,38 @@ body {
   background-color: #f8f9fa;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Header */
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #333;
   color: #fff;
-  padding: 2% 4%;
+  padding: 2% 5%;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 150%;
+  font-size: 2.5vw;
   font-weight: bold;
+  flex-shrink: 0;
 }
 
 .navbar {
   display: flex;
-  gap: 4%;
-  flex-wrap: nowrap;
-  justify-content: center;
-  overflow-y: auto;
+  gap: 4vw;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
-  font-size: 100%;
+  font-size: 1.2vw;
   transition: color 0.3s;
 }
 
@@ -57,28 +57,29 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 5%;
   color: white;
-  padding: 4%;
 }
 
 .hero-text h1 {
-  font-size: 300%;
+  font-size: 5vw;
   margin-bottom: 2%;
 }
 
 .hero-text p {
-  font-size: 150%;
+  font-size: 2vw;
   margin-bottom: 4%;
 }
 
 .btn {
-  padding: 2% 5%;
+  padding: 1.5% 4%;
   background: #f39c12;
   color: white;
   border: none;
   border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5vw;
   transition: background 0.3s;
 }
 
@@ -88,12 +89,12 @@ body {
 
 /* Sections */
 section {
-  padding: 8% 4%;
+  padding: 10% 5%;
   text-align: center;
 }
 
 section h2 {
-  font-size: 200%;
+  font-size: 3vw;
   margin-bottom: 2%;
 }
 
@@ -103,7 +104,8 @@ section h2 {
 }
 
 .services li {
-  margin: 2% 0;
+  margin: 1vw 0;
+  font-size: 1.5vw;
 }
 
 /* Footer */
@@ -111,27 +113,51 @@ footer {
   background: #333;
   color: white;
   text-align: center;
-  padding: 2%;
+  padding: 3% 5%;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 200%;
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .hero-text p {
-    font-size: 100%;
+  .logo {
+    font-size: 6vw;
+    margin-bottom: 2%;
   }
 
   .navbar {
-    flex-direction: row; /* Ensures horizontal even on mobile */
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 4vw;
     justify-content: center;
+    width: 100%;
   }
 
   .navbar a {
-    font-size: 90%;
+    font-size: 4vw;
+  }
+
+  .hero-text h1 {
+    font-size: 8vw;
+  }
+
+  .hero-text p {
+    font-size: 4vw;
+  }
+
+  .btn {
+    font-size: 4vw;
+    padding: 3% 6%;
+  }
+
+  section h2 {
+    font-size: 6vw;
+  }
+
+  .services li {
+    font-size: 4vw;
   }
 }
